@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Developer Portfolio</title>
+    <link rel="icon" type="image/png" href="./img/Chrollo_2.webp">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+<body class="min-h-screen">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold gradient-text">LYHENG DEV</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-center space-x-8">
+                        <a href="#home" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 font-medium">Home</a>
+                        <a href="#about" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 font-medium">About</a>
+                        <a href="#skills" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 font-medium">Skills</a>
+                        <a href="#projects" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 font-medium">Projects</a>
+                        <a href="#contact" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 font-medium">Contact</a>
+                        <a href="https://drive.google.com/file/d/1_thhsUjF0c0zXoWAcufEVpi2WZhwsvXG/view?usp=sharing" target="_blank" class="nav-link text-gray-700 hover:text-gray-900 px-3 py-2 font-medium">View CV</a>
+                    </div>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 hover:text-gray-900 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">About</a>
+                <a href="#skills" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Skills</a>
+                <a href="#projects" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Projects</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">Contact</a>
+                <a href="https://drive.google.com/file/d/1_thhsUjF0c0zXoWAcufEVpi2WZhwsvXG/view?usp=sharing" target="_blank" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50">View CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-24 pb-16 md:pt-32 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto min-h-screen flex items-center">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    Hi, I'm <span class="gradient-text">Cheng Lyheng</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-600">
+                    Frontend Web Developer
+                </h2>
+                <p class="text-lg text-gray-500 mb-8 max-w-lg">
+                    I build exceptional digital experiences that are fast, accessible, and visually appealing.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="#projects" class="px-8 py-3 bg-gradient-to-r from-purple-600 to-blue-600 text-white font-medium rounded-full hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+                        View My Work
+                    </a>
+                    <a href="#contact" class="px-8 py-3 border-2 border-gray-300 text-gray-700 font-medium rounded-full hover:border-purple-500 hover:text-purple-600 transition-all duration-300">
+                        Contact Me
+                    </a>
+                </div>
+                <div class="mt-8 flex justify-center md:justify-start space-x-4">
+                    <a href="https://www.facebook.com/share/16cwY9WtPY/?mibextid=wwXIfr" class="text-gray-500 hover:text-blue-600 transition-colors duration-300">
+                        <i class="fab fa-facebook text-2xl"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@clheng.tech?_t=ZS-8wvARaZyaKO&_r=1" class="text-gray-500 hover:text-pink-600 transition-colors duration-300">
+                        <i class="fab fa-tiktok text-2xl"></i>
+                    </a>
+                    <a href="https://t.me/chenglyheng_TECH" class="text-gray-500 hover:text-blue-400 transition-colors duration-300">
+                        <i class="fab fa-telegram text-2xl"></i>
+                    </a>
+                    <a href="https://www.instagram.com/chenglyheng.io?igsh=NnM0eWY0YjE3ZGUx&utm_source=qr" class="text-gray-500 hover:text-purple-600 transition-colors duration-300">
+                        <i class="fab fa-instagram text-2xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="relative flex justify-center">
+                <div class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl floating">
+                    <img src="./img/profile.jpg" alt="Developer" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-4 -left-4 w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center shadow-lg">
+                    <div class="w-16 h-16 rounded-full bg-purple-200 flex items-center justify-center pulse">
+                        <i class="fab fa-react text-3xl text-purple-600"></i>
+                    </div>
+                </div>
+                <div class="absolute -bottom-20 -left-120 w-20 h-20 rounded-full bg-purple-100 flex items-center justify-center shadow-lg">
+                    <div class="w-16 h-16 rounded-full bg-purple-200 flex items-center justify-center pulse">
+                       <i class="bi bi-css text-2xl text-purple-600"></i>
+                    </div>
+                </div>
+                <div class="absolute -top-4 -right-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center pulse">
+                        <i class="fab fa-js text-2xl text-yellow-500"></i>
+                    </div>
+                </div>
+                <div class="absolute -bottom-5 -right-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center shadow-lg">
+                    <div class="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center pulse">
+                       <i class="bi bi-filetype-html text-2xl"></i>
+                    </div>
+                </div>
+                <div class="absolute -top-1 -left-4 w-16 h-16 rounded-full bg-blue-100 flex items-center justify-center shadow-lg">
+                    <div style="color: white;" class="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center pulse">
+                       <i class="bi bi-typescript text-2xl text-blue-600"></i>
+                    </div>
+                </div>
+                <div class="absolute -top-40 -right-30 w-16 h-16 p-2 rounded-full bg-blue-100 flex items-center justify-center shadow-lg hidden lg:block">
+                    <div style="color: white;" class="w-full h-full rounded-full bg-purple-400 flex items-center justify-center pulse">
+                       <i class="bi bi-bootstrap text-2xl text-gray-200"></i>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-50 rounded-3xl my-12">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                <span class="gradient-text">About Me</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-6"></div>
+            <p class="text-gray-500 max-w-3xl mx-auto">
+                Get to know more about who I am and what I do
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="relative">
+                <div class="bg-white p-6 rounded-2xl shadow-lg">
+                    <h3 class="text-2xl font-semibold mb-4">Who am I?</h3>
+                    <p class="text-gray-600 mb-4">
+                        I'm Cheng Lyheng, a passionate Full Stack Developer based in Phnhom Penh. With over 1 years of experience in web development, I specialize in creating modern, responsive, and user-friendly websites and applications.
+                    </p>
+                    <p class="text-gray-600 mb-4">
+                        My journey in tech started when I was 15, building simple websites for fun. Since then, I've worked with startups and established companies to bring their digital visions to life.
+                    </p>
+                    <p class="text-gray-600">
+                        When I'm not coding, you can find me hiking, reading sci-fi novels, or experimenting with new recipes in the kitchen.
+                    </p>
+                </div>
+                <div class="absolute -z-10 -inset-4 bg-gradient-to-r from-purple-100 to-blue-100 rounded-3xl opacity-70"></div>
+            </div>
+            
+            <div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 card-hover">
+                        <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-graduation-cap text-purple-600 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Education</h4>
+                        <p class="text-gray-500 text-sm">
+                            B.Sc. in Management Information System from SETEC Institute
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 card-hover">
+                        <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-briefcase text-blue-600 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Experience</h4>
+                        <p class="text-gray-500 text-sm">
+                            1+ years working as a Full Stack Developer
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 card-hover">
+                        <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-project-diagram text-green-600 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Projects</h4>
+                        <p class="text-gray-500 text-sm">
+                            10+ projects completed successfully
+                        </p>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 card-hover">
+                        <div class="w-12 h-12 rounded-full bg-yellow-100 flex items-center justify-center mb-4">
+                            <i class="fas fa-award text-yellow-600 text-xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Achievements</h4>
+                        <p class="text-gray-500 text-sm">
+                            10+ industry awards and recognitions
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 bg-white p-6 rounded-2xl shadow-lg">
+                    <h4 class="font-semibold mb-4">My Approach</h4>
+                    <p class="text-gray-600 mb-4">
+                        I believe in clean, efficient code and thoughtful user experiences. Every project is an opportunity to solve problems creatively.
+                    </p>
+                    <a href="https://drive.google.com/file/d/1_thhsUjF0c0zXoWAcufEVpi2WZhwsvXG/view?usp=sharing" target="_blank" class="inline-flex items-center text-purple-600 font-medium">
+                        Download Resume
+                        <i class="fas fa-download ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto my-12">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                My <span class="gradient-text">Skills</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-6"></div>
+            <p class="text-gray-500 max-w-3xl mx-auto">
+                The tools and technologies I use to bring ideas to life
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-semibold mb-6">Frontend Development</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">React.js</span>
+                            <span class="text-gray-500">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">JavaScript</span>
+                            <span class="text-gray-500">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">HTML/CSS</span>
+                            <span class="text-gray-500">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Bootstrap CSS</span>
+                            <span class="text-gray-500">95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 95%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Tailwind CSS</span>
+                            <span class="text-gray-500">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <h3 class="text-2xl font-semibold mb-6">Backend & Other Skills</h3>
+                <div class="space-y-6">
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Node.js</span>
+                            <span class="text-gray-500">55%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 55%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Express.js</span>
+                            <span class="text-gray-500">50%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 50%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">MongoDB</span>
+                            <span class="text-gray-500">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">MySQL</span>
+                            <span class="text-gray-500">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-2">
+                            <span class="font-medium">Git & GitHub</span>
+                            <span class="text-gray-500">70%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" style="width: 70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-16">
+            <h3 class="text-2xl font-semibold mb-8 text-center">Technologies I Work With</h3>
+            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
+                <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-300 card-hover">
+                    <i class="fab fa-react text-4xl text-blue-500 mb-2"></i>
+                    <span class="text-sm font-medium">React</span>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-300 card-hover">
+                    <i class="fab fa-js text-4xl text-yellow-500 mb-2"></i>
+                    <span class="text-sm font-medium">JavaScript</span>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-300 card-hover">
+                    <i class="fab fa-node-js text-4xl text-green-500 mb-2"></i>
+                    <span class="text-sm font-medium">Node.js</span>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-300 card-hover">
+                    <i class="fab fa-css3-alt text-4xl text-blue-400 mb-2"></i>
+                    <span class="text-sm font-medium">CSS3</span>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-300 card-hover">
+                    <i class="fab fa-html5 text-4xl text-orange-500 mb-2"></i>
+                    <span class="text-sm font-medium">HTML5</span>
+                </div>
+                <div class="bg-white p-4 rounded-xl shadow-md flex flex-col items-center justify-center hover:shadow-lg transition-shadow duration-300 card-hover">
+                    <i class="fab fa-git-alt text-4xl text-red-500 mb-2"></i>
+                    <span class="text-sm font-medium">Git</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto bg-gray-50 rounded-3xl my-12">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                My <span class="gradient-text">Projects</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-6"></div>
+            <p class="text-gray-500 max-w-3xl mx-auto">
+                Some of my recent work that I'm proud of
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Project 1 -->
+            <div class="project-card h-96">
+                <div class="project-inner relative w-full h-full">
+                    <div class="project-front absolute w-full h-full bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="./img/image.png" alt="Project 1" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Movie Website</h3>
+                            <p class="text-gray-600 text-sm mb-4">A full-featured online store with cart, checkout, and admin dashboard.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">React</span>
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Node.js</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-back absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl shadow-lg p-6 flex flex-col justify-center items-center text-white">
+                        <h3 class="text-xl font-semibold mb-2">Movie Website</h3>
+                        <p class="text-white text-sm mb-4 text-center">Built with modern technologies to provide seamless shopping experience.</p>
+                        <ul class="text-sm space-y-1 mb-6">
+                            <li><i class="fas fa-check-circle mr-2"></i> Product catalog</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Secure payments</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Admin dashboard</li>
+                        </ul>
+                        <a href="https://epic-movie-sigma.vercel.app/   " target="_blank" class="px-4 py-2 bg-white text-purple-600 rounded-full text-sm font-medium">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card h-96">
+                <div class="project-inner relative w-full h-full">
+                    <div class="project-front absolute w-full h-full bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1469&q=80" alt="Project 2" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
+                            <p class="text-gray-600 text-sm mb-4">A productivity app to organize your tasks and boost efficiency.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full">React</span>
+                                <span class="px-2 py-1 bg-red-100 text-red-800 text-xs rounded-full">Firebase</span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">Tailwind</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-back absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl shadow-lg p-6 flex flex-col justify-center items-center text-white">
+                        <h3 class="text-xl font-semibold mb-2">Task Management App</h3>
+                        <p class="text-white text-sm mb-4 text-center">Helps individuals and teams stay organized and productive.</p>
+                        <ul class="text-sm space-y-1 mb-6">
+                            <li><i class="fas fa-check-circle mr-2"></i> Drag & drop interface</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Real-time updates</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Team collaboration</li>
+                        </ul>
+                        <a onclick="handleAlert()" href="#" class="px-4 py-2 bg-white text-purple-600 rounded-full text-sm font-medium">View Project</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card h-96">
+                <div class="project-inner relative w-full h-full">
+                    <div class="project-front absolute w-full h-full bg-white rounded-2xl shadow-lg overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Project 3" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Social Media Dashboard</h3>
+                            <p class="text-gray-600 text-sm mb-4">Analytics dashboard for social media managers.</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-blue-100 text-blue-800 text-xs rounded-full">Next.js</span>
+                                <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">GraphQL</span>
+                                <span class="px-2 py-1 bg-indigo-100 text-indigo-800 text-xs rounded-full">TypeScript</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-back absolute w-full h-full bg-gradient-to-br from-purple-600 to-blue-600 rounded-2xl shadow-lg p-6 flex flex-col justify-center items-center text-white">
+                        <h3 class="text-xl font-semibold mb-2">Social Media Dashboard</h3>
+                        <p class="text-white text-sm mb-4 text-center">Comprehensive analytics for multiple social platforms.</p>
+                        <ul class="text-sm space-y-1 mb-6">
+                            <li><i class="fas fa-check-circle mr-2"></i> Real-time metrics</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Custom reports</li>
+                            <li><i class="fas fa-check-circle mr-2"></i> Team sharing</li>
+                        </ul>
+                        <a onclick="handleAlert()" href="#" class="px-4 py-2 bg-white text-purple-600 rounded-full text-sm font-medium">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-12">
+            <a href="#" onclick="handleAlert()" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700">
+                View All Projects
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto my-12">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                Get In <span class="gradient-text">Touch</span>
+            </h2>
+            <div class="w-20 h-1 bg-gradient-to-r from-purple-600 to-blue-600 mx-auto mb-6"></div>
+            <p class="text-gray-500 max-w-3xl mx-auto">
+                Have a project in mind or want to collaborate? Feel free to reach out!
+            </p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+                <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+                <div class="space-y-6">
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center">
+                                <i class="fas fa-envelope text-purple-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-medium text-gray-900">Email</h4>
+                            <p class="text-gray-500">chenglyheng.tech@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center">
+                                <i class="fas fa-phone-alt text-blue-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-medium text-gray-900">Phone</h4>
+                            <p class="text-gray-500">+885 9628 61 601</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="flex-shrink-0">
+                            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-green-600 text-xl"></i>
+                            </div>
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-medium text-gray-900">Location</h4>
+                            <p class="text-gray-500">Cambodia, PP</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-8">
+                    <h4 class="font-semibold mb-4">Follow Me</h4>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/share/16cwY9WtPY/?mibextid=wwXIfr" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://t.me/chenglyheng_TECH" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-black hover:text-white transition-colors duration-300">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://t.me/chenglyheng_TECH" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-blue-100 hover:text-blue-400 transition-colors duration-300">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="https://www.instagram.com/chenglyheng.io?igsh=NnM0eWY0YjE3ZGUx&utm_source=qr" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div>
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="name" name="name" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-200">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-200">
+                        </div>
+                    </div>
+                    <div>
+                        <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                        <input type="text" id="subject" name="subject" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-200">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                        <textarea id="message" name="message" rows="4" class="contact-input w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-200"></textarea>
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full px-6 py-3 border border-transparent text-base font-medium rounded-full shadow-sm text-white bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-purple-500 transition-all duration-300 transform hover:scale-105">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold gradient-text mb-4">DevPort</h3>
+                    <p class="text-gray-400">
+                        Creating digital experiences that make an impact. Let's build something amazing together.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors duration-300">Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition-colors duration-300">About</a></li>
+                        <li><a href="#skills" class="text-gray-400 hover:text-white transition-colors duration-300">Skills</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-white transition-colors duration-300">Projects</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition-colors duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">
+                        Subscribe to my newsletter for the latest updates and insights.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 w-full rounded-l-lg focus:outline-none text-gray-900">
+                        <button type="submit" class="bg-gradient-to-r from-purple-600 to-blue-600 px-4 py-2 rounded-r-lg hover:from-purple-700 hover:to-blue-700 transition-colors duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm mt-3">
+                    &copy; 2023 DevPort. All rights reserved.
+                </p>
+                <div class="flex space-x-4 mt-3">
+                        <a href="https://www.facebook.com/share/16cwY9WtPY/?mibextid=wwXIfr" class="w-8 h-8 bg-gray-500 rounded-full  flex items-center justify-center text-gray-700 hover:bg-blue-100 hover:text-blue-600 transition-colors duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://t.me/chenglyheng_TECH" target="_blank" class="w-8 h-8 bg-gray-500 rounded-full  flex items-center justify-center text-gray-700 hover:bg-black hover:text-white transition-colors duration-300">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                        <a href="https://t.me/chenglyheng_TECH" target="_blank" class="w-8 h-8 bg-gray-500 rounded-full  flex items-center justify-center text-gray-700 hover:bg-blue-100 hover:text-blue-400 transition-colors duration-300">
+                            <i class="fab fa-telegram-plane"></i>
+                        </a>
+                        <a href="https://www.instagram.com/chenglyheng.io?igsh=NnM0eWY0YjE3ZGUx&utm_source=qr" target="_blank" class=" w-8 h-8 bg-gray-500 rounded-full  flex items-center justify-center text-gray-700 hover:bg-indigo-100 hover:text-indigo-600 transition-colors duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-blue-600 text-white shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="./index.js">
+        
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
