@@ -92,5 +92,5 @@
             });
         }
        function handleAlert(){
-        Swal.fire("System is Fixing!");
+        Swal.fire("Coming Soon..");
        }
