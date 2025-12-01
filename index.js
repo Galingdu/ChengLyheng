@@ -94,3 +94,10 @@
        function handleAlert(){
         Swal.fire("Coming Soon..");
        }
+       function openPDFModal() {
+    document.getElementById("pdfModal").classList.remove("hidden");
+  }
+
+  function closePDFModal() {
+    document.getElementById("pdfModal").classList.add("hidden");
+  }
