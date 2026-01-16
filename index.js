@@ -92,7 +92,8 @@
             });
         }
        function handleAlert(){
-        Swal.fire("Coming Soon..");
+        // Swal.fire("Coming Soon..");
+        alert("Coming Soon..");
        }
        function openPDFModal() {
     document.getElementById("pdfModal").classList.remove("hidden");
